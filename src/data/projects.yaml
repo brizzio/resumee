@@ -1,0 +1,8 @@
+projects:
+  - title: Portfolio Site
+    link: https://yourdomain.com
+    description: Personal website built with Astro and Decap CMS.
+
+  - title: Finance App
+    link: https://github.com/yourname/finance-app
+    description: React + Firebase tool to manage financial strategies.

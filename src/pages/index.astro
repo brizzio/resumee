@@ -1,0 +1,31 @@
+---
+import yaml from 'js-yaml';
+import fs from 'fs';
+import '../styles/global.css';
+
+const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf-8'));
+const projects = yaml.load(fs.readFileSync('./src/data/projects.yaml', 'utf-8')).projects;
+
+---
+
+<html>
+  <body class="bg-gray-100 text-gray-900 font-sans">
+    <main class="max-w-2xl mx-auto p-6">
+      <h1 class="text-4xl font-bold text-blue-600 mb-4">{cv.fullName}</h1>
+      <p class="text-lg text-gray-700">{cv.title}</p>
+      <p class="mt-4">{cv.bio}</p>
+
+      <h2 class="mt-10 text-2xl font-bold">Projects</h2>
+      <ul class="space-y-4 mt-4">
+        {projects.map(project => (
+          <li class="border p-4 rounded bg-white shadow">
+            <a href={project.link} class="text-blue-600 font-semibold text-lg">{project.title}</a>
+            <p>{project.description}</p>
+          </li>
+        ))}
+      </ul>
+    </main>
+  </body>
+</html>
+
+

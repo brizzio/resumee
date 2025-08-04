@@ -1,0 +1,19 @@
+{
+  "name": "astro-tailwind-v4-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "astro": "^5.12.8",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^4.1.11"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11"
+  }
+}

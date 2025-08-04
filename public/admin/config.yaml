@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "cv"
+    label: "CV"
+    files:
+      - name: "cv"
+        label: "Currículo"
+        file: "src/data/cv.yaml"
+        format: "yaml"
+        fields:
+          - { name: fullName, label: "Full Name", widget: string }
+          - { name: title, label: "Title", widget: string }
+          - { name: bio, label: "Bio", widget: text }
+
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    file: "src/data/projects.yaml"
+    format: "yaml"
+    fields:
+      - label: Projects
+        name: projects
+        widget: list
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: link, label: Link, widget: string }
+          - { name: description, label: Description, widget: text }
